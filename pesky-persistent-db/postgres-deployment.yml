@@ -24,3 +24,13 @@ spec:
           #        mountPath: /var/lib/postgresql/data
           #        name to be postgredb
           # c. Add the persistent volume claim from postgres-persistent.yml
+          volumeMounts:
+            - mountPath: /var/lib/postgresql/data
+              name: postgredb
+          envFrom:
+            - configMapRef:
+                name: postgres-config
+      volumes:
+        - name: postgredb
+          persistentVolumeClaim:
+            claimName: postgres-pv-claim
