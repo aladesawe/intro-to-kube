@@ -6,3 +6,10 @@ metadata:
 spec:
   # TODO:
   # Define ingress
+  podSelector: {}
+  policyTypes: ["Ingress"]
+  ingress:
+    - from:
+        - namespaceSelector:
+            matchLabels:
+              name: namespace-a
