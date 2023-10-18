@@ -13,11 +13,11 @@ spec:
     - from:
         - namespaceSelector:
             matchLabels:
-              name: namespace-b
+              kubernetes.io/metadata.name: namespace-b
   egress:
     - to:
         - namespaceSelector:
             matchExpressions:
-              - key: namespace
+              - key: kubernetes.io/metadata.name
                 operator: In
                 values: ["namespace-b", "namespace-c"]
