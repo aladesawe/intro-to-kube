@@ -30,7 +30,7 @@ spec:
       runAfter:
         - build
       params:
-        - name: IMAGE
+        - name: IMAGE_NAME
           value: nginx:latest
         - name: DOCKERFILE_PATH
           value: /workspace/source
