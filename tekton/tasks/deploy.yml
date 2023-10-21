@@ -8,7 +8,7 @@ spec:
       type: string
     - name: NAMESPACE
       type: string
-    - name: IMAGE_NAME
+    - name: IMAGE
       type: string
   steps:
     # TODO
@@ -29,4 +29,4 @@ spec:
     - name: kubectl-image
       image: lachlanevenson/k8s-kubectl
       script: |
-        kubectl set image deployment/nginx-deployment nginx=$(params.IMAGE_NAME) -n=$(params.NAMESPACE)
+        kubectl set image deployment/nginx-deployment nginx=$(params.IMAGE) -n=$(params.NAMESPACE)

@@ -30,7 +30,7 @@ spec:
       runAfter:
         - build
       params:
-        - name: IMAGE_NAME
+        - name: IMAGE
           value: nginx:latest
         - name: DOCKERFILE_PATH
           value: /workspace/source
@@ -52,5 +52,5 @@ spec:
           value: https://github.com/abanuelo/intro-to-kube.git
         - name: NAMESPACE
           value: default
-        - name: IMAGE_NAME
+        - name: IMAGE
           value: nginx:latest
